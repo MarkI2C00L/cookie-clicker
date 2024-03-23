@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cookie Clicker | JS</title>
+    <style>
+        body {
+            background: url(wp7667538.jpg);
+            overflow: hidden;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .JS {
+            font-family: Helvetica;
+            text-align: center;
+            padding: 10em;
+        }
+        #myBtn {
+            transition: 0.3s;
+        }
+        #myBtn:active {
+            transform: scale(1.1);
+        }
+        #resetBtn {
+            font-family: Helvetica;
+            background-color: hsl(255, 100%, 63%);
+            padding: 10px 20px;
+            font-size: 1.5em;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+            box-shadow: rgba(0, 0, 0, 1);
+            position: absolute;
+            left: 46.7%;
+            top: 64%;
+            transition: 0.3s;
+        }
+        #resetBtn:hover {
+            transform: translateY(-5px);
+        }
+        .pi {
+            font-family: Helvetica;
+            position: absolute;
+            top: 95%;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="JS">
+    <h1>You have collected <span id="mySpam">0</span> cookies</h1>
+    <input type="image" src="PerfectCookie.png" width="200" id="myBtn">
+    </div>
+    <button id="resetBtn">Reset</button>
+    <p class="pi">&copy; All rights reserved 2024.</p>
+    <script>
+        let count = 0;
+        count = Number(count)
+        document.getElementById("myBtn").onclick = function(){
+            count ++;
+            document.getElementById("mySpam").textContent = count;
+        }
+        document.getElementById("resetBtn").onclick = function(){
+            count = 0;
+            document.getElementById("mySpam").textContent = count;
+        }
+        
+    </script>
+</body>
+</html>
